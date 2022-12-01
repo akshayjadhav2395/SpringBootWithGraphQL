@@ -1,0 +1,28 @@
+
+type Mutation{
+	addProducts(product:ProductInput):Product
+}
+
+type Query{
+	getAllProduct:[Product]
+	getSingleProduct(productId:Int):Product
+}
+
+type Product{
+	productId:ID
+	productName:String
+	category:String
+	description:String
+	price:Float
+	quantity:Int
+	isAvailable:Boolean
+}
+
+input ProductInput{
+	productName:String
+	category:String
+	description:String
+	price:Float
+	quantity:Int
+	isAvailable:Boolean
+}
